@@ -1,4 +1,4 @@
-Etna Moda
+Etna Moda - Laboratorio de aplicaciones web cliente 2025
 
 Integrantes: 
 
