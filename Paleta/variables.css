@@ -1,0 +1,95 @@
+/* 🌐 Paleta 1 */
+body.paleta-1 {
+  --color-primary: #1E3A8A;
+  --color-secondary: #3B82F6;
+  --color-accent: #22C55E;
+  --color-background: #F9FAFB;
+  --color-text: #000000;
+
+  background-color: var(--color-background);
+  color: var(--color-text);
+}
+
+/* 🌐 Paleta 2 */
+body.paleta-2 {
+  --color-primary: #521eec;
+  --color-secondary: #b2a3e3;
+  --color-accent: #000000;
+  --color-background: #f1efef;
+  --color-text: #000000;
+
+  background-color: var(--color-background);
+  color: var(--color-text);
+}
+
+/* 🌐 Paleta 3 */
+body.paleta-3 {
+  --color-primary: #dc2e2e;
+  --color-secondary: #d57676a8;
+  --color-accent: #ba6118;
+  --color-background: #eee9e2;
+  --color-text: #000000;
+
+  background-color: var(--color-background);
+  color: var(--color-text);
+}
+
+/* Ahora todos los elementos usan las variables de la clase activa */
+header {
+  background-color: var(--color-primary);
+  color: white;
+  padding: 1rem;
+  border-radius: 6px;
+}
+
+button {
+  background-color: var(--color-primary);
+  color: white;
+  border: none;
+  border-radius: 6px;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: var(--color-secondary);
+  font-weight: bold;
+}
+
+.highlight {
+  background-color: var(--color-secondary);
+  color: white;
+  padding: 1rem;
+  border-radius: 6px;
+  margin-bottom: 1rem;
+}
+
+.accent {
+  color: var(--color-accent);
+  font-weight: bold;
+}
+
+.card {
+  background-color: white;
+  border: 2px solid var(--color-primary);
+  padding: 1rem;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+  width: 250px;
+}
+
+.card:hover{
+    transform: scale(1.05); /* Aumenta un 5% */
+    box-shadow: 0 10px 20px rgba(0,0,0,0.3);
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Animación suave al hacer hover: escala y sombra en 0.3s con efecto ease */
+    }
+
+.card button {
+  background-color: var(--color-primary);
+  color: white;
+}
+
+.card button:hover {
+  background-color: var(--color-secondary);
+}
