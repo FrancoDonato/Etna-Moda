@@ -64,6 +64,5 @@ function renderizarProductos(lista) {
         `;
     })
     productList.innerHTML = cardTemplate;
-    console.log("hola");
     
 }
