@@ -7,6 +7,8 @@ import { getProducts } from "./api.js";
 let productList = document.querySelector('#gallery-grid');
 let productBuscado = document.querySelector('#ItemFiltrado');
 let btnBuscador = document.querySelector('#button-buscador');
+let btnClear = document.querySelector('#button-clear');
+
 
 //Declaro products como un arrray
 
@@ -40,6 +42,10 @@ btnBuscador.addEventListener('click', () => {
   renderizarProductos(filtrados);
 });
 
+//Creo la funcion para que al tocar el boton de busqueda limpie los filtros de busqueda
+btnClear.addEventListener('click', () => {
+  iniciar();
+});
 //Realice la funcion que se encargara de reenderizar los productos
 
 function renderizarProductos(lista) {
