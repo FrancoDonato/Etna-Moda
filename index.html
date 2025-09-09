@@ -29,7 +29,7 @@
         <nav class="navbar bg-body-tertiary fixed-top" id="nav-bar">
             <div class="container-fluid" id="content-nav">
                 <h1>
-                    <a class="navbar-brand" href="#div-buscador">ETNA-MODA</a>
+                    <a class="navbar-brand" href="#">ETNA-MODA</a>
                 </h1>
 
                 <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas"
@@ -44,7 +44,7 @@
                     <div class="offcanvas-body">
                         <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
                             <li class="nav-item">
-                                <a class="nav-link active" aria-current="page" href="#div-buscador">Home</a>
+                                <a class="nav-link active" aria-current="page" href="#">Home</a>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link" href="#">Contacto</a>
@@ -68,23 +68,22 @@
                 </div>
             </div>
         </nav>
-
+        
+    </header>
+    
+    <main>
         <!--Sector para el buscador -->
 
-    <form class="d-flex mt-3" role="search">
-        <div class="input-group mb-3" id="div-buscador">
-            <input type="text" class="form-control" placeholder="Busque su producto..." id="ItemFiltrado"
-                aria-describedby="button-addon2">
-            <button class="btn btn-outline-primary" type="button" id="button-buscador"><i
-                    class="fa-solid fa-magnifying-glass"></i></button>
-            <button class="btn btn-outline-primary" type="button" id="button-clear"><i
-                    class="fa-solid fa-filter-circle-xmark"></i></button>
-        </div>
-    </form>
-
-    </header>
-
-    <main>
+        <form class="d-flex mt-3" role="search">
+            <div class="input-group mb-3" id="div-buscador">
+                <input type="text" class="form-control" placeholder="Busque su producto..." id="ItemFiltrado"
+                    aria-describedby="button-addon2">
+                <button class="btn btn-outline-primary" type="button" id="button-buscador"><i
+                        class="fa-solid fa-magnifying-glass"></i></button>
+                <button class="btn btn-outline-primary" type="button" id="button-clear"><i
+                        class="fa-solid fa-filter-circle-xmark"></i></button>
+            </div>
+        </form>
 
         <div class="gallery-grid" id="gallery-grid">
             <!-- generado en el archivo index.js -->
