@@ -50,7 +50,7 @@ btnClear.addEventListener('click', () => {
 //Realice la funcion que se encargara de reenderizar los productos
 
 function renderizarProductos(lista) {
-  productList.innerHTML = ''; 
+  productList.innerHTML = '<div class="d-flex align-items-center"><strong role="status">Loading...</strong><div class="spinner-border ms-auto" aria-hidden="true"></div></div>'; 
   
   if (lista.length === 0) {
       productList.innerHTML = '<p class="text-muted">No se encontraron productos.</p>';
