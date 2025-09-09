@@ -45,7 +45,7 @@ btnBuscador.addEventListener('click', () => {
 //Creo la funcion para que al tocar el boton de busqueda limpie los filtros de busqueda
 btnClear.addEventListener('click', () => {
   iniciar();
-  productBuscado.value = "";
+  productBuscado.value="";
 });
 //Realice la funcion que se encargara de reenderizar los productos
 
