@@ -20,9 +20,12 @@ main {
     flex-direction: column;
 }
 
-#nav-bar{
+/*Estilos del navbar*/
+
+#nav-bar {
     background-color: rgb(147, 47, 235);
     text-align: center;
+
     h1 {
         color: rgb(255, 255, 255);
         padding: 10px;
@@ -30,8 +33,9 @@ main {
     }
 }
 
-#content-nav{
+#content-nav {
     background-color: rgb(147, 47, 235);
+
     h1 {
         color: rgb(255, 255, 255);
         padding: 10px;
@@ -39,16 +43,43 @@ main {
     }
 
 }
-.d-flex{
+
+.botones-nav {
+    display: flex;
+    gap: 1rem;
+}
+
+#btnCarrito {
+    background-color: rgb(147, 47, 235);
+    border-color: rgba(0, 0, 0, 0.15);
+    color: white;
+}
+
+#btnCarrito:hover {
+
+    border: solid 2px;
+    border-color: black;
+}
+
+.navbar-toggler:hover {
+
+    border: solid 2px;
+    border-color: black;
+    transition: ease-in-out 0.1s;
+}
+
+.d-flex {
     display: flex;
     justify-content: center;
     width: 100%;
 }
-#div-buscador{
+
+#div-buscador {
     display: flex;
     justify-content: center;
     width: 60%;
 }
+
 .gallery-grid {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
@@ -57,6 +88,7 @@ main {
     justify-items: center;
     margin: 10px;
 }
+
 
 /* Estilos de las tarjetas */
 .card {
