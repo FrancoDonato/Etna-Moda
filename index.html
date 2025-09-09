@@ -32,10 +32,36 @@
                     <a class="navbar-brand" href="#">ETNA-MODA</a>
                 </h1>
 
-                <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas"
-                    data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
+                <!--Div de botones del nav-->
+
+                <div class="botones-nav">
+                    <button id="btnCarrito" class="btn btn-primary" type="button" data-bs-toggle="offcanvas"
+                        data-bs-target="#carritoDeCompras" aria-controls="carritoDeCompras"><i
+                            class="fa-solid fa-cart-shopping"></i></button>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas"
+                        data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar"
+                        aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+
+                </div>
+
+                <!--Sidebar de carrito de compras-->
+
+                <div class="offcanvas offcanvas-end" tabindex="-1" id="carritoDeCompras"
+                    aria-labelledby="carritoDeCompras">
+                    <div class="offcanvas-header">
+                        <h5 class="carritoDeCompras-title" id="offcanvasRightLabel">Carro de compras</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                    </div>
+                    <div class="offcanvas-body">
+                        ...
+                    </div>
+                </div>
+
+
+                <!--Sidebar de Menu de navegacion-->
+
                 <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar"
                     aria-labelledby="offcanvasNavbarLabel">
                     <div class="offcanvas-header">
@@ -68,9 +94,9 @@
                 </div>
             </div>
         </nav>
-        
+
     </header>
-    
+
     <main>
         <!--Sector para el buscador -->
 
@@ -88,6 +114,7 @@
         <div class="gallery-grid" id="gallery-grid">
             <!-- generado en el archivo index.js -->
         </div>
+
     </main>
 
     <!--Footer-->
