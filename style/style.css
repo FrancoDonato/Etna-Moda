@@ -11,6 +11,7 @@ html {
 }
 
 body {
+    padding-top: 5rem;
     background-color: #f4efeff5;
 }
 
@@ -18,10 +19,9 @@ main {
     display: flex;
 }
 
-.nav-bar {
+#nav-bar{
     background-color: rgb(147, 47, 235);
     text-align: center;
-
     h1 {
         color: rgb(255, 255, 255);
         padding: 10px;
@@ -29,6 +29,25 @@ main {
     }
 }
 
+#content-nav{
+    background-color: rgb(147, 47, 235);
+    h1 {
+        color: rgb(255, 255, 255);
+        padding: 10px;
+        font-size: 40px;
+    }
+
+}
+.d-flex{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+#div-buscador{
+    display: flex;
+    justify-content: center;
+    width: 60%;
+}
 .gallery-grid {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
