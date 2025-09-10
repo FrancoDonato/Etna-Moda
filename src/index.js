@@ -2,13 +2,13 @@
 
 import { getProducts } from "./api.js";
 
+
 //Traemos los elementos necesarios desde el HTML
 
 let productList = document.querySelector('#gallery-grid');
 let productBuscado = document.querySelector('#ItemFiltrado');
 let btnBuscador = document.querySelector('#button-buscador');
 let btnClear = document.querySelector('#button-clear');
-
 
 //Declaro products como un arrray
 
@@ -47,6 +47,8 @@ btnClear.addEventListener('click', () => {
   iniciar();
   productBuscado.value="";
 });
+
+
 //Realice la funcion que se encargara de reenderizar los productos
 
 function renderizarProductos(lista) {
@@ -66,6 +68,10 @@ function renderizarProductos(lista) {
         <div class = "card-body">
         <p class = "card-title">${p.title}</p>
         <h5 class = "card-price">$${p.price}</h5>
+        </div>
+        <div>
+        <button id="detalleItem" type="button" class="btn btn-outline-primary">Detalle</button>
+        <button id="agregarItem" type="button" class="btn btn-outline-success">+</button>
         </div>
         </div>     
         `;
