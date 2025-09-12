@@ -1,6 +1,7 @@
 //Importamos el llamado a la Api desde api.js
 
 import { getProducts } from "./api.js";
+import { modalDetalle } from "./components/detalle.js";
 
 
 //Traemos los elementos necesarios desde el HTML
@@ -20,7 +21,7 @@ let products = [];
 
 async function iniciar() {
   try {
-    products = await getProducts(); 
+    products = await getProducts();
     renderizarProductos(products);
   } catch (error) {
     console.error("Error al obtener productos:", error);
@@ -45,37 +46,44 @@ btnBuscador.addEventListener('click', () => {
 //Creo la funcion para que al tocar el boton de busqueda limpie los filtros de busqueda
 btnClear.addEventListener('click', () => {
   iniciar();
-  productBuscado.value="";
+  productBuscado.value = "";
 });
 
 
 //Realice la funcion que se encargara de reenderizar los productos
 
 function renderizarProductos(lista) {
-  productList.innerHTML = '<div class="d-flex align-items-center"><strong role="status">Loading...</strong><div class="spinner-border ms-auto" aria-hidden="true"></div></div>'; 
-  
+  productList.innerHTML = '<div class="d-flex align-items-center"><strong role="status">Loading...</strong><div class="spinner-border ms-auto" aria-hidden="true"></div></div>';
+
   if (lista.length === 0) {
-      productList.innerHTML = '<p class="text-muted">No se encontraron productos.</p>';
-      return;
-    }
+    productList.innerHTML = '<p class="text-muted">No se encontraron productos.</p>';
+    return;
+  }
 
-    let cardTemplate = ''; 
+  let cardTemplate = '';
 
-    lista.forEach(p => {
-        cardTemplate += `
+  lista.forEach(p => {
+    cardTemplate += `
         <div class ="card"> 
-        <img src="${p.image}" class="card-image" alt="${p.title}">
-        <div class = "card-body">
-        <p class = "card-title">${p.title}</p>
-        <h5 class = "card-price">$${p.price}</h5>
-        </div>
-        <div>
-        <button id="detalleItem" type="button" class="btn btn-outline-primary">Detalle</button>
-        <button id="agregarItem" type="button" class="btn btn-outline-success">+</button>
-        </div>
+          <img src="${p.image}" class="card-image" alt="${p.title}">
+          <div class = "card-body">
+            <p class = "card-title">${p.title}</p>
+            <h5 class = "card-price">$${p.price}</h5>
+          </div>
+          <div>
+            <button id="detalleItem-${p.id}" type="button" class="btn btn-outline-primary">Ver más</button>
+            <button id="agregarItem-${p.id}" type="button" class="btn btn-outline-success">Agregar al carrito</button>
+          </div>
         </div>     
         `;
+  })
+  productList.innerHTML = cardTemplate;
+  //Asigno eventos al botón ver más
+  lista.forEach((p) => {
+    let btn = document.querySelector(`#detalleItem-${p.id}`);
+    btn.addEventListener('click', () => {
+      modalDetalle(p);
     })
-    productList.innerHTML = cardTemplate;
-    
+  })
+
 }
