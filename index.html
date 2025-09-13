@@ -5,20 +5,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Etna-Moda</title>
-
-    <link rel="stylesheet" href="./style/style.css">
     <!-- Preconexión para optimizar carga de fuentes de Google -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <!-- Fuentes Google: Bebas Neue y Roboto -->
     <link
-        href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Oswald:wght@200..700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
         rel="stylesheet">
     <!-- Íconos de Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <!-- Implementacion de boostrap-->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link rel="stylesheet" href="./style/style.css">
 
 </head>
 
@@ -28,9 +27,7 @@
         <!--Menú de navegación-->
         <nav class="navbar bg-body-tertiary fixed-top" id="nav-bar">
             <div class="container-fluid" id="content-nav">
-                <h1>
-                    <a class="navbar-brand" href="#">ETNA-MODA</a>
-                </h1>
+                <h1> ETNA-MODA </h1>
 
                 <!--Div de botones del nav-->
 
@@ -45,54 +42,53 @@
                     </button>
 
                 </div>
-
-                <!--Sidebar de carrito de compras-->
-
-                <div class="offcanvas offcanvas-end" tabindex="-1" id="carritoDeCompras"
-                    aria-labelledby="carritoDeCompras">
-                    <div class="offcanvas-header">
-                        <h5 class="carritoDeCompras-title" id="offcanvasRightLabel">Carro de compras</h5>
-                        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-                    </div>
-                    <div class="offcanvas-body">
-                        ...
-                    </div>
-                </div>
-
-
-                <!--Sidebar de Menu de navegacion-->
-
-                <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar"
-                    aria-labelledby="offcanvasNavbarLabel">
-                    <div class="offcanvas-header">
-                        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-                    </div>
-                    <div class="offcanvas-body">
-                        <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
-                            <li class="nav-item">
-                                <a class="nav-link active" aria-current="page" href="#">Home</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="#">Contacto</a>
-                            </li>
-                            <li class="nav-item dropdown">
-                                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
-                                    aria-expanded="false">
-                                    Mas informacion...
-                                </a>
-                                <ul class="dropdown-menu">
-                                    <li><a class="dropdown-item" href="#">Nosotros...</a></li>
-                                    <li>
-                                        <hr class="dropdown-divider">
-                                    </li>
-                                    <li><a class="dropdown-item" href="#">Locales...</a></li>
-                                </ul>
-                            </li>
-                        </ul>
-
-                    </div>
-                </div>
             </div>
+        </nav>
+        <!--Sidebar de carrito de compras-->
+
+        <div class="offcanvas offcanvas-end" tabindex="-1" id="carritoDeCompras" aria-labelledby="carritoDeCompras">
+            <div class="offcanvas-header">
+                <h5 class="carritoDeCompras-title" id="offcanvasRightLabel">Carro de compras</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+            </div>
+            <div class="offcanvas-body">
+                ...
+            </div>
+        </div>
+
+
+        <!--Sidebar de Menu de navegacion-->
+
+        <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+            <div class="offcanvas-header">
+                <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+            </div>
+            <div class="offcanvas-body">
+                <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Contacto</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            Mas informacion...
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#">Nosotros...</a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li><a class="dropdown-item" href="#">Locales...</a></li>
+                        </ul>
+                    </li>
+                </ul>
+
+            </div>
+        </div>
+        </div>
         </nav>
 
     </header>

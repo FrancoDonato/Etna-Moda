@@ -8,12 +8,18 @@ export function modalDetalle(p) {
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
         <div class="modal-body">
-            <img src="${p.image}" class= "img-fluid" alt="${p.title}">
-            <p> ${p.description}</p>
+            <div class="row">
+                <div class="col-md-6">
+                    <img src="${p.image}" class= "img-fluid" alt="${p.title}">
+                </div>
+                <div class="col-md-6">
+                    <p> ${p.description}</p>
+                    <h4> $${p.price}</h4>
+                </div>
+            </div>
         </div>
             <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
-                <button type="button" class="btn btn-primary">Agregar al carrito</button>
+                <button type="button" class="btn-card">Agregar al carrito</button>
             </div>
         </div>
     </div>
