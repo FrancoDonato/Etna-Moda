@@ -1,6 +1,6 @@
 //Importamos el llamado a la Api desde api.js
 
-import { getProducts } from "./api.js";
+import { getProducts } from "./services/api.js";
 import { modalDetalle } from "./components/detalle.js";
 
 
@@ -13,13 +13,13 @@ let btnClear = document.querySelector('#button-clear');
 
 //Declaro products como un arrray
 
-let products = [];
+export let products = [];
 
 //Defino la funcion asincrona iniciar, la cual renderizara en primera instancia todos los cards
 //espero la promesa, y manejo el resultado con await esperando el resultado
 //y catch manejando el error
 
-async function iniciar() {
+export async function iniciar() {
   try {
     products = await getProducts();
     renderizarProductos(products);
@@ -31,28 +31,9 @@ async function iniciar() {
 
 iniciar();
 
-//Creo la funcion para que al tocar el boton de busqueda filtre los resultados
-
-btnBuscador.addEventListener('click', () => {
-  const texto = productBuscado.value.toLowerCase();
-
-  const filtrados = products.filter(p =>
-    p.title.toLowerCase().includes(texto)
-  );
-
-  renderizarProductos(filtrados);
-});
-
-//Creo la funcion para que al tocar el boton de busqueda limpie los filtros de busqueda
-btnClear.addEventListener('click', () => {
-  iniciar();
-  productBuscado.value = "";
-});
-
-
 //Realice la funcion que se encargara de reenderizar los productos
 
-function renderizarProductos(lista) {
+export function renderizarProductos(lista) {
   productList.innerHTML = '<div class="d-flex align-items-center"><strong role="status">Loading...</strong><div class="spinner-border ms-auto" aria-hidden="true"></div></div>';
 
   if (lista.length === 0) {
