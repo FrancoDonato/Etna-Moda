@@ -40,9 +40,21 @@ main {
 
 }
 
-.botones-nav {
-    display: flex;
-    gap: 1rem;
+.bg-body-tertiary {
+    --bs-bg-opacity: 0;
+}
+
+#btnMenu {
+    background-color: rgb(147, 47, 235);
+    border-color: rgba(0, 0, 0, 0.15);
+    color: white;
+
+}
+
+#btnMenu:hover {
+
+    border: solid 2px;
+    border-color: rgb(255, 255, 255);
 }
 
 #btnCarrito {
@@ -54,11 +66,11 @@ main {
 #btnCarrito:hover {
 
     border: solid 2px;
-    border-color: black;
+    border-color: rgb(255, 255, 255);
 }
 
 .navbar-toggler:hover {
-
+    color: #ffffff;
     border: solid 2px;
     border-color: black;
     transition: ease-in-out 0.1s;
@@ -75,6 +87,48 @@ main {
     justify-content: center;
     width: 60%;
 }
+
+.filter-prices {
+    display: flex;
+    flex-direction: row;
+}
+
+.filters-form {
+    display: flex;
+    align-self: center;
+
+    .filter {
+        display: flex;
+        flex-direction: column;
+
+        label {
+            color: rgb(0, 0, 0);
+            margin: 6px;
+            font-size: 15px;
+            width: 90%;
+
+        }
+
+        select {
+            height: 38px;
+            border-radius: 5px;
+            font-size: 16px;
+            padding: 4px;
+            width: 300px;
+            margin: 5px;
+        }
+
+        input {
+            border-radius: 5px;
+            font-size: 16px;
+            padding: 4px;
+            width: 60px;
+            margin: 5px;
+            border-color: none;
+        }
+    }
+}
+
 
 .gallery-grid {
     display: grid;
@@ -129,7 +183,7 @@ main {
     margin: 10px;
     align-self: flex-end;
     font-size: 16px;
-    background-color: #000000;
+    background-color: rgb(147, 47, 235);
     color: rgb(255, 255, 255);
     border: none;
     cursor: pointer;
@@ -199,10 +253,8 @@ footer .redes a {
     justify-content: center;
 }
 
-footer img {
-    width: 20px;
-    height: 20px;
-    margin-right: 7px;
+#icono {
+    color: #ffffff;
 }
 
 footer p {
