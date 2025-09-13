@@ -71,8 +71,8 @@ function renderizarProductos(lista) {
             <h5 class = "card-price">$${p.price}</h5>
           </div>
           <div>
-            <button id="detalleItem-${p.id}" type="button" class="btn btn-outline-primary">Ver más</button>
-            <button id="agregarItem-${p.id}" type="button" class="btn btn-outline-success">Agregar al carrito</button>
+            <button id="detalleItem-${p.id}" type="button" class="btn-card">Ver más</button>
+            <button id="agregarItem-${p.id}" type="button" class="btn-card">Agregar al carrito</button>
           </div>
         </div>     
         `;
