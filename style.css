@@ -1,0 +1,374 @@
+* {
+    margin: 0%;
+    border: 0%;
+    padding: 0;
+    font-family: "Roboto", sans-serif;
+    font-style: normal;
+
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: #f4efeff5;
+}
+
+main {
+    margin-top: 5rem;
+    display: flex;
+    flex-direction: column;
+}
+
+/*Estilos del navbar*/
+.navbar {
+    padding-top: 0;
+}
+
+#content-nav {
+    background-color: rgb(147, 47, 235);
+
+    h1 {
+        color: rgb(255, 255, 255);
+        padding: 10px;
+        font-size: 45px;
+        font-family: "Bebas Neue", sans-serif;
+        font-weight: 400;
+        font-style: normal;
+    }
+
+}
+
+.bg-body-tertiary {
+    --bs-bg-opacity: 0;
+}
+
+#btnMenu {
+    background-color: rgb(147, 47, 235);
+    border-color: rgba(0, 0, 0, 0.15);
+    color: white;
+
+}
+
+#btnMenu:hover {
+
+    border: solid 2px;
+    border-color: rgb(255, 255, 255);
+}
+
+#btnCarrito {
+    background-color: rgb(147, 47, 235);
+    border-color: rgba(0, 0, 0, 0.15);
+    color: white;
+}
+
+#btnCarrito:hover {
+
+    border: solid 2px;
+    border-color: rgb(255, 255, 255);
+}
+
+.navbar-toggler:hover {
+    color: #ffffff;
+    border: solid 2px;
+    border-color: black;
+    transition: ease-in-out 0.1s;
+}
+
+.d-flex {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+#div-buscador {
+    display: flex;
+    justify-content: center;
+    width: 60%;
+}
+
+.filter-prices {
+    display: flex;
+    flex-direction: row;
+}
+
+.filters-form {
+    display: flex;
+    align-self: center;
+
+    .filter {
+        display: flex;
+        flex-direction: column;
+
+        label {
+            color: rgb(0, 0, 0);
+            margin: 6px;
+            font-size: 15px;
+            width: 90%;
+
+        }
+
+        select {
+            height: 38px;
+            border-radius: 5px;
+            font-size: 16px;
+            padding: 4px;
+            width: 300px;
+            margin: 5px;
+        }
+
+        input {
+            border-radius: 5px;
+            font-size: 16px;
+            padding: 4px;
+            width: 60px;
+            margin: 5px;
+            border-color: none;
+        }
+    }
+}
+
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    padding: 20px;
+    gap: 10px;
+    justify-items: center;
+    margin: 10px;
+}
+
+
+/* Estilos de las tarjetas */
+.card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border-radius: 6px;
+    border-color: 2px rgb(58, 56, 53) solid;
+    padding: 10px;
+    margin: 10px;
+    background-color: #ffffff;
+    box-shadow: 0px 0px 1px rgb(167, 161, 161);
+    width: 85%;
+
+
+    p {
+        font-size: 1rem;
+        padding: 10px;
+    }
+
+    h5 {
+        font-size: 1rem;
+        padding: 10px;
+    }
+
+    img {
+        width: 100%;
+        height: 270px;
+        object-fit: contain;
+        align-self: center;
+        justify-content: center;
+        border-radius: 6px;
+    }
+
+}
+
+/* Estilos para todos los botones */
+.btn-card {
+    width: fit-content;
+    padding: 10px;
+    border-radius: 7px;
+    margin: 10px;
+    align-self: flex-end;
+    font-size: 16px;
+    background-color: rgb(147, 47, 235);
+    color: rgb(255, 255, 255);
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 2px 2px 5px rgb(163, 154, 154);
+    
+}
+
+.btn-card:hover {
+    color: rgb(255, 255, 255);
+    background-color: #b700ff;
+    font-weight: bold;
+}
+
+/*Estilos del modal*/
+.modal-header {
+    border-bottom: none;
+}
+
+
+.modal-footer {
+    justify-content: center;
+    border-top: none;
+}
+
+/*Estilos del footer*/
+footer {
+    background-color: rgb(147, 47, 235);
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding: 8px;
+    justify-content: center;
+    align-items: stretch;
+    align-content: stretch;
+    column-gap: 10px;
+}
+
+footer div {
+    padding: 5px;
+}
+
+footer .copyright {
+
+    justify-content: flex-end;
+    align-items: end;
+    align-content: flex-end;
+
+}
+
+footer .contactdata {
+    align-content: flex-end;
+
+}
+
+footer .redes {
+    display: flex;
+    flex-direction: row;
+    column-gap: 90px;
+    width: 70%;
+    align-self: auto;
+    justify-content: center;
+    align-items: center;
+
+}
+
+footer .redes a {
+    justify-content: center;
+}
+
+#icono {
+    color: #ffffff;
+}
+
+footer p {
+    padding: 1px;
+    font-size: 15px;
+    color: white;
+    font-style: italic;
+}
+/* Mediaqueries de Responsive */
+
+/* Escritorio > 992px) */
+@media (max-width: 1200px) {
+    .gallery-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+/* Medianos > 768px */
+@media (max-width: 992px) {
+    #content-nav h1 {
+        font-size: 35px;
+    }
+
+    #div-buscador {
+        width: 80%;
+    }
+
+    .filters-form {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .filter select,
+    .filter input {
+        width: 250px;
+    }
+
+    .gallery-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .card {
+        width: 90%;
+    }
+
+    footer .redes {
+        column-gap: 50px;
+        width: 90%;
+    }
+}
+
+/* pequeno horizontal  576px */
+@media (max-width: 768px) {
+    #content-nav h1 {
+        font-size: 30px;
+    }
+
+    #div-buscador {
+        width: 95%;
+    }
+
+    .filters-form {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .filter {
+        width: 100%;
+        align-items: center;
+    }
+
+    .filter select,
+    .filter input {
+        width: 80%;
+    }
+
+    .gallery-grid {
+        grid-template-columns: 1fr;
+        padding: 10px;
+    }
+
+    .card {
+        width: 95%;
+        margin: 10px auto;
+    }
+
+    footer {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    footer .redes {
+        flex-direction: column;
+        column-gap: 0;
+        row-gap: 10px;
+        width: 100%;
+    }
+
+    footer .copyright,
+    footer .contactdata {
+        text-align: center;
+        width: 100%;
+    }
+}
+
+/* pequeno < 576px) */
+@media (max-width: 576px) {
+    #content-nav h1 {
+        font-size: 25px;
+    }
+
+    .filter select,
+    .filter input {
+        width: 90%;
+    }
+}
