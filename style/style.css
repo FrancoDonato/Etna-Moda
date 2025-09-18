@@ -219,6 +219,7 @@ footer {
     align-items: stretch;
     align-content: stretch;
     column-gap: 10px;
+
 }
 
 footer div {
@@ -262,4 +263,113 @@ footer p {
     font-size: 15px;
     color: white;
     font-style: italic;
+}
+
+/* Mediaqueries de Responsive */
+
+/* Escritorio > 992px) */
+@media (max-width: 1200px) {
+    .gallery-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+/* Medianos > 768px */
+@media (max-width: 992px) {
+    #content-nav h1 {
+        font-size: 35px;
+    }
+
+    #div-buscador {
+        width: 80%;
+    }
+
+    .filters-form {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .filter select,
+    .filter input {
+        width: 250px;
+    }
+
+    .gallery-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .card {
+        width: 90%;
+    }
+
+    footer .redes {
+        column-gap: 50px;
+        width: 90%;
+    }
+}
+
+/* pequeno horizontal  576px */
+@media (max-width: 768px) {
+    #content-nav h1 {
+        font-size: 30px;
+    }
+
+    #div-buscador {
+        width: 95%;
+    }
+
+    .filters-form {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .filter {
+        width: 100%;
+        align-items: center;
+    }
+
+    .filter select,
+    .filter input {
+        width: 80%;
+    }
+
+    .gallery-grid {
+        grid-template-columns: 1fr;
+        padding: 10px;
+    }
+
+    .card {
+        width: 95%;
+        margin: 10px auto;
+    }
+
+    footer {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    footer .redes {
+        flex-direction: column;
+        column-gap: 0;
+        row-gap: 10px;
+        width: 100%;
+    }
+
+    footer .copyright,
+    footer .contactdata {
+        text-align: center;
+        width: 100%;
+    }
+}
+
+/* pequeno < 576px) */
+@media (max-width: 576px) {
+    #content-nav h1 {
+        font-size: 25px;
+    }
+
+    .filter select,
+    .filter input {
+        width: 90%;
+    }
 }
