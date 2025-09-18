@@ -7,9 +7,6 @@ import { modalDetalle } from "./components/detalle.js";
 //Traemos los elementos necesarios desde el HTML
 
 let productList = document.querySelector('#gallery-grid');
-let productBuscado = document.querySelector('#ItemFiltrado');
-let btnBuscador = document.querySelector('#button-buscador');
-let btnClear = document.querySelector('#button-clear');
 
 //Declaro products como un arrray
 
