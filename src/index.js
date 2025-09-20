@@ -3,6 +3,7 @@
 import { getProducts } from "./services/api.js";
 import { modalDetalle } from "./components/detalle.js";
 
+console.log('uwuuuu')
 
 //los elementos necesarios desde el HTML
 
@@ -39,18 +40,6 @@ const updateCartCount = () => {
     cartCountSpan.textContent = totalItems;
 };
 
-// Muestra un mensaje temporal (ej. "Item agregado al carrito")
-export const displayAddToCartMessage = (message, isError = false) => {
-    addToCartMessage.textContent = message;
-    addToCartMessage.classList.remove('error');
-    if (isError) {
-        addToCartMessage.classList.add('error');
-    }
-    addToCartMessage.style.display = 'block';
-    setTimeout(() => {
-        addToCartMessage.style.display = 'none';
-    }, 3000);
-};
 
 // Agrega un producto al carrito
 export const addToCart = (product, quantity = 1) => {
@@ -70,7 +59,6 @@ export const addToCart = (product, quantity = 1) => {
         });
     }
     saveCart();
-    displayAddToCartMessage(`${quantity} x ${product.title} agregado al carrito!`);
 };
 
 // Elimina un item del carrito
@@ -187,7 +175,7 @@ const renderCartItems = () => {
             subtotal += itemTotal;
 
             const cartItemDiv = document.createElement('div');
-            cartItemDiv.classList.add('d-flex', 'align-items-center', 'mb-3');
+            cartItemDiv.classList.add('item-cart-wrapper');
             cartItemDiv.innerHTML = `
                 <img src="${item.image}" alt="${item.title}" style="width: 50px; height: 50px; object-fit: contain;">
                 <div class="mx-2 flex-grow-1">
@@ -199,7 +187,7 @@ const renderCartItems = () => {
                     <input type="text" class="form-control text-center" value="${item.quantity}" readonly>
                     <button class="btn btn-outline-secondary increase-cart-item" data-id="${item.id}" type="button">+</button>
                 </div>
-                <button class="btn btn-sm btn-link text-danger remove-item-btn" data-id="${item.id}">&times;</button>
+                <button class="btn btn-sm btn-link text-danger remove-item-btn" data-id="${item.id}">❌</button>
             `;
             cartItemsList.appendChild(cartItemDiv);
         });

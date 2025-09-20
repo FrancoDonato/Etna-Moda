@@ -78,6 +78,20 @@ main {
     border-color: rgb(255, 255, 255);
 }
 
+.item-cart-wrapper{
+    display: grid;
+    grid-template-columns: 1fr 7fr 1fr 1fr;
+    align-items: center;
+}
+
+.remove-item-btn{
+    text-decoration: none;
+    font-size: 10px;
+}
+.remove-item-btn:hover{
+    opacity: 0.7;
+}
+
 .navbar-toggler:hover {
     color: #ffffff;
     border: solid 2px;

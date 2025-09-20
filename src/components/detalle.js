@@ -60,4 +60,16 @@ export function modalDetalle(p) {
     });
 
     bootstrapModal.show();
+
+//Toast de Agregado al carrito
+const toastTrigger = document.getElementById('modal-add-to-cart')
+const toastLiveExample = document.getElementById('liveToast')
+
+if (toastTrigger) {
+  const toastBootstrap = bootstrap.Toast.getOrCreateInstance(toastLiveExample)
+  toastTrigger.addEventListener('click', () => {
+    toastBootstrap.show()
+  })
+}
+
 }
