@@ -32,9 +32,10 @@
                 <!--Div de botones del nav-->
 
                 <div class="botones-nav">
-                    <button id="btnCarrito" class="btn btn-primary" type="button" data-bs-toggle="offcanvas"
-                        data-bs-target="#carritoDeCompras" aria-controls="carritoDeCompras"><i
-                            class="fa-solid fa-cart-shopping"></i></button>
+                    <button id="openCartBtn" class="btn btn-primary" type="button" data-bs-toggle="offcanvas"
+                        data-bs-target="#carritoDeCompras" aria-controls="carritoDeCompras">
+                        <i class="fa-solid fa-cart-shopping"></i> <span id="cartCountSpan" class="badge bg-secondary">0</span>
+                    </button>
 
                     <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas"
                         data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation"
@@ -52,8 +53,17 @@
                 <h5 class="carritoDeCompras-title" id="offcanvasRightLabel">Carro de compras</h5>
                 <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
             </div>
-            <div class="offcanvas-body">
-                ...
+            <div class="offcanvas-body" id="cartModal">
+                <div id="cartItemsList">
+                    <!-- Cart items will be rendered here -->
+                </div>
+                <div class="cart-summary">
+                    <p>Subtotal: <span id="cartSubtotalSpan">$0.00 ARS</span></p>
+                </div>
+                <div class="cart-actions">
+                    <button id="clearCartBtn" class="btn btn-danger">Vaciar Carrito</button>
+                    <button id="checkoutBtn" class="btn btn-success">Finalizar Compra</button>
+                </div>
             </div>
         </div>
 
@@ -137,8 +147,22 @@
         </div>
 
         <!-- Modal de detalle -->
-        <div class="modal fade" id="productModal" tabindex="-1" aria-labelledby="productModalLabel" aria-hidden="true">
+        <div class="modal fade" id="productDetailModal" tabindex="-1" aria-labelledby="productModalLabel" aria-hidden="true">
             <!-- Generado en JS -->
+        </div>
+        <div id="addToCartMessage" class="add-to-cart-message"></div>
+
+        <!-- Toast de Agregado al Carrito -->
+        <div class="toast-container position-fixed bottom-0 end-0 p-3">
+        <div id="liveToast" class="toast" role="alert" aria-live="assertive" aria-atomic="true">
+            <div class="toast-header">
+            <strong class="me-auto">Etna Moda</strong>
+            <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+            </div>
+            <div class="toast-body">
+            Item agregado al carrito!
+            </div>
+        </div>
         </div>
 
     </main>
