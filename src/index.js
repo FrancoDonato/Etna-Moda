@@ -3,8 +3,6 @@
 import { getProducts } from "./services/api.js";
 import { modalDetalle } from "./components/detalle.js";
 
-console.log('uwuuuu')
-
 //los elementos necesarios desde el HTML
 
 let productList = document.querySelector('#gallery-grid');
