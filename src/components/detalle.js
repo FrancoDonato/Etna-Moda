@@ -1,4 +1,4 @@
-import { addToCart } from "../index.js";
+import { addToCart } from "../components/carrito.js";
 
 export function modalDetalle(p) {
     let container = document.querySelector('#productDetailModal');
@@ -11,13 +11,13 @@ export function modalDetalle(p) {
             </div>
         <div class="modal-body">
             <div class="row">
-                <div class="col-md-6">
+                <div class="col-md-6 d-flex justify-content-center">
                     <img src="${p.image}" class="img-fluid" alt="${p.title}">
                 </div>
                 <div class="col-md-6 d-flex flex-column justify-content-center">
                     <p> ${p.description}</p>
                     <h4> $${p.price}</h4>
-                    <div class="d-flex align-items-center mt-3">
+                    <div class="d-flex-1 align-items-center mt-3">
                         <label for="modal-quantity" class="me-2">Cantidad:</label>
                         <div class="input-group" style="width: 130px;">
                             <button class="btn btn-outline-secondary" type="button" id="modal-decrease-qty">-</button>
@@ -61,15 +61,17 @@ export function modalDetalle(p) {
 
     bootstrapModal.show();
 
-//Toast de Agregado al carrito
-const toastTrigger = document.getElementById('modal-add-to-cart')
-const toastLiveExample = document.getElementById('liveToast')
+    //Toast de Agregado al carrito
+    const toastTrigger = document.getElementById('modal-add-to-cart')
+    const toastLiveExample = document.getElementById('liveToast')
 
-if (toastTrigger) {
-  const toastBootstrap = bootstrap.Toast.getOrCreateInstance(toastLiveExample)
-  toastTrigger.addEventListener('click', () => {
-    toastBootstrap.show()
-  })
+    if (toastTrigger) {
+        const toastBootstrap = bootstrap.Toast.getOrCreateInstance(toastLiveExample)
+        toastTrigger.addEventListener('click', () => {
+            toastBootstrap.show()
+        })
+    }
+
 }
 
-}
+
