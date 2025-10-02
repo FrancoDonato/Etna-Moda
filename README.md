@@ -15,7 +15,7 @@ Github: FrancoDonato
  
  -Los botones que agregue en el navbar desplegan un offcanvas 
  
- -Agregue iconos en el footer y les agregue un target=_blank para que no cierre nuestra pagina
+ -Agregue iconos en el footer y les agregue un "target=_blank" para que no cierre nuestra pagina
 
 Suleivi Liendo
 
