@@ -2,13 +2,19 @@ Etna Moda - Laboratorio de aplicaciones web cliente 2025
 
 Integrantes: 
 
-Franco Gonzalez Donato
+Franco Gonzalez Donato:
 Github: FrancoDonato
+ 
  -Arme la logica principal del buscador
+ 
  -Arme la logica del limpiador de filtros 
+ 
  -Implemente boostrap en distintos componentes
+ 
  -Agregue el botones en el navbar
+ 
  -Los botones que agregue en el navbar desplegan un offcanvas 
+ 
  -Agregue iconos en el footer y les agregue un target=_blank para que no cierre nuestra pagina
 
 Suleivi Liendo
