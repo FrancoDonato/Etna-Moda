@@ -18,6 +18,12 @@ Github: FrancoDonato
  -Agregue iconos en el footer y les agregue un "target=_blank" para que no cierre nuestra pagina
 
 Suleivi Liendo
+- Agrege los mediaqueries para hacer la pagina responsiva
+- Logica del carrito de compras
+        -Local storage
+        -Funcion de agregar producto/cantidad / eliminar del carrito / toasts 
+        -Actualizacion de los productos del carrito en la barra de navegacion
+        -Botones de manejo del contenido del carrito y sidebar
 
 Gabriela Yael Moreno Polacov:
 Github: gabipolacov
